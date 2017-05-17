@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 switch (v.getId()) {
                     case R.id.Botoningresar:
-                        if (user.equals("camilo") && pass.equals("123456")) {
+                        if (user.equals("camilo") && pass.equals("1234")) {
                             Toast.makeText(getApplicationContext(), "Bienvenido", Toast.LENGTH_SHORT).show();
                             Intent nuevomenu = new Intent(MainActivity.this, Menu.class);
                             startActivity(nuevomenu);
