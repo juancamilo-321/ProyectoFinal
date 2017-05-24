@@ -33,6 +33,7 @@ public class Menu extends AppCompatActivity {
         setContentView(R.layout.activity_menu);
         //Se llama la variable spinner  del modo grafico para poder utilizarla en el programa
         spinnerprogramas = (Spinner) findViewById(R.id.spinnerProgramas);
+
         spinneruniremington = (Spinner) findViewById(R.id.spinnerUniremington);
         spinnersedes = (Spinner) findViewById(R.id.spinnerSedes);
         spinneradmisiones = (Spinner) findViewById(R.id.spinnerAdmisiones);
@@ -43,6 +44,7 @@ public class Menu extends AppCompatActivity {
 
         //lista para mostrar en pantalla de PROGRAMAS
         List list = new ArrayList();
+        list.add("PROGRAMAS");
         list.add("Especializaciones");
         list.add("Profesionales");
         list.add("Tecnologicos");
@@ -108,22 +110,22 @@ public class Menu extends AppCompatActivity {
         ArrayAdapter arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, list);
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerprogramas.setAdapter(arrayAdapter);
-        webView = (WebView)findViewById(R.id.web);
+
         spinnerprogramas.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 switch (position) {
-                    case 0:
+                    case 1:
                        Intent especializaciones = new Intent(Menu.this, Especializaciones.class);
                         startActivity(especializaciones);
                         //webView.loadUrl("http://uniremingtonmanizales.edu.co/alta-gerencia/");
                         //Se puede hacer de dos formas 1. Crear en webView en la nueva pagina para ver la PAGINA y crear los botoner de las otras paginas
                                                     // 2. Crear una nueva pagina y mostrar todas las opciones de las carreras, crear los botoner para cada una
                         break;
-                    case 1:
+                    case 2:
                         webView.loadUrl("http://uniremingtonmanizales.edu.co/administracion/");
                         break;
-                    case 2:
+                    case 3:
                         webView.loadUrl("http://uniremingtonmanizales.edu.co/contable/");
                         break;
             }

@@ -12,6 +12,6 @@ public class Especializaciones extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_especializaciones);
         webView = (WebView) findViewById(R.id.Especializaciones);
-        webView.loadUrl("http://uniremingtonmanizales.edu.co/alta-gerencia/");
+        webView.loadUrl("http://www.uniremington.edu.co/manizales/buscador.html?isc=1&category_id=&xf_1=4&xf_2=33&programa=si");
     }
 }
