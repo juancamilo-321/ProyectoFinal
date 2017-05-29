@@ -7,6 +7,8 @@ import android.view.View;
 import android.webkit.WebView;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Spinner;
 
 import java.util.ArrayList;
@@ -23,7 +25,7 @@ public class Menu extends AppCompatActivity {
     Spinner spinnerbienesyegre;
     Spinner spinnercomunidad;
     Spinner spinnerubicacion;
-
+    ImageView salir;
 
     WebView webView;
 
@@ -422,8 +424,16 @@ public class Menu extends AppCompatActivity {
             }
         });
 
+        salir = (ImageView)findViewById(R.id.btnsalir);
+        salir.setOnClickListener((new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_MAIN);
+                intent.addCategory(Intent.CATEGORY_HOME);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+            }
+        }));
     }
-
-
-    }
+}
 
