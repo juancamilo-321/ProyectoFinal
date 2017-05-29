@@ -61,20 +61,36 @@
             </LinearLayout>
         </HorizontalScrollView>
 
-        <Spinner
-            android:id="@+id/web"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            tools:layout_editor_absoluteY="0dp"
-            tools:layout_editor_absoluteX="8dp"></Spinner>
-
     <ImageView
         android:id="@+id/btnsalir"
         android:layout_width="94dp"
         android:layout_height="41dp"
         app:srcCompat="@drawable/salir"
-        tools:layout_editor_absoluteX="274dp"
-        tools:layout_editor_absoluteY="454dp" />
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="455dp"/>
 
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/remington"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="232dp" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ToggleButton"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="173dp"/>
 
 </android.support.constraint.ConstraintLayout>

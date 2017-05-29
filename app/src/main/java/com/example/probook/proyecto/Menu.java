@@ -8,8 +8,11 @@ import android.webkit.WebView;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.Toast;
+import android.widget.ToggleButton;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,6 +29,7 @@ public class Menu extends AppCompatActivity {
     Spinner spinnercomunidad;
     Spinner spinnerubicacion;
     ImageView salir;
+
 
     WebView webView;
 
@@ -55,6 +59,7 @@ public class Menu extends AppCompatActivity {
 
         //Lista para mostrar en pantalla de Uniremington
         List list1 = new ArrayList();
+        list1.add("UNIREMINGTON");
         list1.add("Misión Visión");
         list1.add("Valores Instituconales");
         list1.add("lineamientos Academicos");
@@ -65,6 +70,7 @@ public class Menu extends AppCompatActivity {
 
         //Lista para mostrar en pantalla de SEDES
         List list2 = new ArrayList();
+        list2.add("SEDES");
         list2.add("Armenia");
         list2.add("Boyacá");
         list2.add("Bucaramanga");
@@ -78,6 +84,7 @@ public class Menu extends AppCompatActivity {
 
         //Lista para mostrar en pantalla de ADMISIONES
         List list3 = new ArrayList();
+        list3.add("ADMISIONES");
         list3.add("Pre-Inscripcion");
         list3.add("Requisitos de Inscripcion");
         list3.add("Homologaciones");
@@ -86,6 +93,7 @@ public class Menu extends AppCompatActivity {
 
         //Lista para mostrar en pantalla de PLATAFORMAS
         List list4 = new ArrayList();
+        list4.add("PLATAFORMAS");
         list4.add("Moodle");
         list4.add("Q10");
         list4.add("Recibo de Matricula");
@@ -96,15 +104,19 @@ public class Menu extends AppCompatActivity {
 
         //Lista para mostrar en pantalla de BIENESTAR Y EGRESADOS
         List list5 = new ArrayList();
+        list5.add("BIENESTAR");
         list5.add("Internacionalizacion");
         list5.add("Convenios y Descuentos");
 
         //Lista para mostrar en pantalla de COMUNIDAD
         List list6 = new ArrayList();
+        list6.add("COMUNIDAD");
         list6.add("Calendario - Eventos");
+        list6.add("Encuesta");
 
-        //Lista para mostrar en pantalla de COMUNIDAD
+        //Lista para mostrar en pantalla de UBICACION
         List list7 = new ArrayList();
+        list7.add("UBICACION");
         list7.add("Sede Cable");
         list7.add("Sede Centro");
 
@@ -155,7 +167,7 @@ public class Menu extends AppCompatActivity {
             });
 
         //Se crear un Array para mostrar el nombre seleccionado en una nueva pantalla de UNIREMINGTON
-        ArrayAdapter arrayAdapter1 = new ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, list);
+        ArrayAdapter arrayAdapter1 = new ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, list1);
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinneruniremington.setAdapter(arrayAdapter1);
 
@@ -207,7 +219,7 @@ public class Menu extends AppCompatActivity {
         });
 
         //Se crear un Array para mostrar el nombre seleccionado en una nueva pantalla de SEDES
-        ArrayAdapter arrayAdapter2 = new ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, list);
+        ArrayAdapter arrayAdapter2 = new ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, list2);
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnersedes.setAdapter(arrayAdapter2);
 
@@ -267,7 +279,7 @@ public class Menu extends AppCompatActivity {
 
     });
         //Se crear un Array para mostrar el nombre seleccionado en una nueva pantalla de ADMISIONES
-        ArrayAdapter arrayAdapter3 = new ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, list);
+        ArrayAdapter arrayAdapter3 = new ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, list3);
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinneradmisiones.setAdapter(arrayAdapter3);
 
@@ -304,7 +316,7 @@ public class Menu extends AppCompatActivity {
         });
 
         //Se crear un Array para mostrar el nombre seleccionado en una nueva pantalla de PLATAFORMAS
-        ArrayAdapter arrayAdapter4 = new ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, list);
+        ArrayAdapter arrayAdapter4 = new ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, list4);
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerplataformas.setAdapter(arrayAdapter4);
 
@@ -349,7 +361,7 @@ public class Menu extends AppCompatActivity {
             }
         });
         //Se crear un Array para mostrar el nombre seleccionado en una nueva pantalla de BIENESTAR Y EGRESADOS
-        ArrayAdapter arrayAdapter5 = new ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, list);
+        ArrayAdapter arrayAdapter5 = new ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, list5);
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerbienesyegre.setAdapter(arrayAdapter5);
 
@@ -374,11 +386,11 @@ public class Menu extends AppCompatActivity {
             }
         });
         //Se crear un Array para mostrar el nombre seleccionado en una nueva pantalla de COMUNIDAD
-        ArrayAdapter arrayAdapter6 = new ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, list);
+        ArrayAdapter arrayAdapter6 = new ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, list6);
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerbienesyegre.setAdapter(arrayAdapter6);
+        spinnercomunidad.setAdapter(arrayAdapter6);
 
-        spinnerbienesyegre.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        spinnercomunidad.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 switch (position) {
@@ -399,7 +411,7 @@ public class Menu extends AppCompatActivity {
             }
         });
         //Se crear un Array para mostrar el nombre seleccionado en una nueva pantalla de UBICACION
-        ArrayAdapter arrayAdapter7 = new ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, list);
+        ArrayAdapter arrayAdapter7 = new ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, list7);
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerbienesyegre.setAdapter(arrayAdapter7);
 
@@ -423,6 +435,23 @@ public class Menu extends AppCompatActivity {
 
             }
         });
+
+
+        ToggleButton toggle;
+        toggle = (ToggleButton)findViewById(R.id.toggleButton);
+
+        toggle.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked){
+                    Toast.makeText(getApplicationContext(),"Presentado Por: Juan Camilo Salinas Sepulveda",Toast.LENGTH_LONG).show();
+                }else{
+                    Toast.makeText(getApplicationContext(),"Presentado A: Andres Felipe Montoya",Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
+
 
         salir = (ImageView)findViewById(R.id.btnsalir);
         salir.setOnClickListener((new View.OnClickListener() {
