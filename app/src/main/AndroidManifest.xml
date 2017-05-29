@@ -57,7 +57,9 @@
         <activity android:name=".Internacionalizacion" />
         <activity android:name=".Conveniosbienestar" />
         <activity android:name=".Calendarioeventos" />
-        <activity android:name=".Encuesta"></activity>
+        <activity android:name=".Encuesta" />
+        <activity android:name=".Sedecable" />
+        <activity android:name=".Sedecentro"></activity>
     </application>
 
 </manifest>
