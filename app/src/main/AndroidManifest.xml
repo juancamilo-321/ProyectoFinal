@@ -24,7 +24,14 @@
         <activity android:name=".Pregrado" />
         <activity android:name=".Tecnologias" />
         <activity android:name=".Extencion" />
-        <activity android:name=".Gruposdeestudio"></activity>
+        <activity android:name=".Gruposdeestudio" />
+        <activity android:name=".Valoresinstitucionales" />
+        <activity android:name=".Lineamientosacademicos" />
+        <activity android:name=".Calendarioacademico" />
+        <activity android:name=".Reglamentoestudiantil" />
+        <activity android:name=".Directorioadministrativo" />
+        <activity android:name=".Dondeestamos" />
+        <activity android:name=".Misionvision"></activity>
     </application>
 
 </manifest>

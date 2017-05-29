@@ -106,7 +106,7 @@ public class Menu extends AppCompatActivity {
         list7.add("Sede Cable");
         list7.add("Sede Centro");
 
-        //Se crear un Array para mostrar el nombre seleccionado en una nueva pantalla
+        //Se crear un Array para mostrar el nombre seleccionado en una nueva pantalla de PROGRAMAS
         ArrayAdapter arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, list);
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerprogramas.setAdapter(arrayAdapter);
@@ -149,6 +149,68 @@ public class Menu extends AppCompatActivity {
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
             }
+            //revisar si esta opcion va en este punto
             });
+
+        //Se crear un Array para mostrar el nombre seleccionado en una nueva pantalla de PROGRAMAS
+        ArrayAdapter arrayAdapter1 = new ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, list);
+        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinneruniremington.setAdapter(arrayAdapter1);
+
+        spinneruniremington.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                switch (position) {
+                    case 1:
+                        Intent misionvision = new Intent(Menu.this, Misionvision.class);
+                        startActivity(misionvision);
+                        //webView.loadUrl("http://uniremingtonmanizales.edu.co/alta-gerencia/");
+                        //Se puede hacer de dos formas 1. Crear en webView en la nueva pagina para ver la PAGINA y crear los botoner de las otras paginas
+                        // 2. Crear una nueva pagina y mostrar todas las opciones de las carreras, crear los botoner para cada una
+                        break;
+                    case 2:
+                        Intent valoresinstitucionales = new Intent (Menu.this, Valoresinstitucionales.class);
+                        startActivity(valoresinstitucionales);
+                        //webView.loadUrl("http://uniremingtonmanizales.edu.co/administracion/");
+                        break;
+                    case 3:
+                        Intent lineamientosacademicos = new Intent (Menu.this, Lineamientosacademicos.class);
+                        startActivity(lineamientosacademicos);
+                        //webView.loadUrl("http://uniremingtonmanizales.edu.co/contable/");
+                        break;
+                    case 4:
+                        Intent calendarioacademico = new Intent (Menu.this, Calendarioacademico.class);
+                        startActivity(calendarioacademico);
+                        //webView.loadUrl("http://uniremingtonmanizales.edu.co/contable/");
+                        break;
+                    case 5:
+                        Intent reglamentoestudiantil = new Intent (Menu.this, Reglamentoestudiantil.class);
+                        startActivity(reglamentoestudiantil);
+                        //webView.loadUrl("http://uniremingtonmanizales.edu.co/contable/");
+                        break;
+                    case 6:
+                        Intent directorioadministrativo = new Intent (Menu.this, Directorioadministrativo.class);
+                        startActivity(directorioadministrativo);
+                        //webView.loadUrl("http://uniremingtonmanizales.edu.co/contable/");
+                        break;
+                    case 7:
+                        Intent dondeestamos = new Intent (Menu.this, Dondeestamos.class);
+                        startActivity(dondeestamos);
+                        //webView.loadUrl("http://uniremingtonmanizales.edu.co/contable/");
+                        break;
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+        
+
+        }
+
+
     }
-}
+
