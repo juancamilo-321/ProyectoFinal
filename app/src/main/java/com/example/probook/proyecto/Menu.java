@@ -371,7 +371,58 @@ public class Menu extends AppCompatActivity {
 
             }
         });
-        }
+        //Se crear un Array para mostrar el nombre seleccionado en una nueva pantalla de COMUNIDAD
+        ArrayAdapter arrayAdapter6 = new ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, list);
+        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerbienesyegre.setAdapter(arrayAdapter6);
+
+        spinnerbienesyegre.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                switch (position) {
+                    case 1:
+                        Intent calendarioeventos = new Intent(Menu.this, Calendarioeventos.class);
+                        startActivity(calendarioeventos);
+                        break;
+                    case 2:
+                        Intent encuesta = new Intent(Menu.this, Encuesta.class);
+                        startActivity(encuesta);
+                        break;
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+        //Se crear un Array para mostrar el nombre seleccionado en una nueva pantalla de UBICACION
+        ArrayAdapter arrayAdapter7 = new ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, list);
+        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerbienesyegre.setAdapter(arrayAdapter7);
+
+        spinnerbienesyegre.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                switch (position) {
+                    case 1:
+                        Intent sedecable = new Intent(Menu.this, Sedecable.class);
+                        startActivity(sedecable);
+                        break;
+                    case 2:
+                        Intent sedecentro = new Intent(Menu.this, Sedecentro.class);
+                        startActivity(sedecentro);
+                        break;
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+    }
 
 
     }

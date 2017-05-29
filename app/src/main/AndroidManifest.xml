@@ -55,7 +55,9 @@
         <activity android:name=".Bibliotecauniremington" />
         <activity android:name=".Moduloatencionpqrs" />
         <activity android:name=".Internacionalizacion" />
-        <activity android:name=".Conveniosbienestar"></activity>
+        <activity android:name=".Conveniosbienestar" />
+        <activity android:name=".Calendarioeventos" />
+        <activity android:name=".Encuesta"></activity>
     </application>
 
 </manifest>
