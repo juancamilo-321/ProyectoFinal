@@ -444,9 +444,9 @@ public class Menu extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked){
-                    Toast.makeText(getApplicationContext(),"Presentado Por: Juan Camilo Salinas Sepulveda",Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),"JUAN CAMILO SALINAS SEPULVEDA",Toast.LENGTH_LONG).show();
                 }else{
-                    Toast.makeText(getApplicationContext(),"Presentado A: Andres Felipe Montoya",Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),"ANDRES FELIPE MONTOYA",Toast.LENGTH_LONG).show();
                 }
             }
         });
