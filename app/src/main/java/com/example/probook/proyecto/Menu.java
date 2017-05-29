@@ -123,12 +123,26 @@ public class Menu extends AppCompatActivity {
                                                     // 2. Crear una nueva pagina y mostrar todas las opciones de las carreras, crear los botoner para cada una
                         break;
                     case 2:
-                        webView.loadUrl("http://uniremingtonmanizales.edu.co/administracion/");
+                        Intent pregrados = new Intent (Menu.this, Pregrado.class);
+                        startActivity(pregrados);
+                        //webView.loadUrl("http://uniremingtonmanizales.edu.co/administracion/");
                         break;
                     case 3:
-                        webView.loadUrl("http://uniremingtonmanizales.edu.co/contable/");
+                        Intent tecnologias = new Intent (Menu.this, Tecnologias.class);
+                        startActivity(tecnologias);
+                        //webView.loadUrl("http://uniremingtonmanizales.edu.co/contable/");
                         break;
-            }
+                    case 4:
+                        Intent extencion = new Intent (Menu.this, Extencion.class);
+                        startActivity(extencion);
+                        //webView.loadUrl("http://uniremingtonmanizales.edu.co/contable/");
+                        break;
+                    case 5:
+                        Intent gruposdeestudio = new Intent (Menu.this, Gruposdeestudio.class);
+                        startActivity(gruposdeestudio);
+                        //webView.loadUrl("http://uniremingtonmanizales.edu.co/contable/");
+                        break;
+                }
 
             }
 

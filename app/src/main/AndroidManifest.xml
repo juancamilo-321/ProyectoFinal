@@ -19,7 +19,12 @@
             </intent-filter>
         </activity>
         <activity android:name=".Menu" />
-        <activity android:name=".Especializaciones"></activity>
+        <activity android:name=".Especializaciones" />
+        <activity android:name=".Uniremington" />
+        <activity android:name=".Pregrado" />
+        <activity android:name=".Tecnologias" />
+        <activity android:name=".Extencion" />
+        <activity android:name=".Gruposdeestudio"></activity>
     </application>
 
 </manifest>
