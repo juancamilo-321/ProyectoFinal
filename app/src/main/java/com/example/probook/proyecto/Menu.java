@@ -204,7 +204,7 @@ public class Menu extends AppCompatActivity {
             }
         });
 
-        //Se crear un Array para mostrar el nombre seleccionado en una nueva pantalla de PROGRAMAS
+        //Se crear un Array para mostrar el nombre seleccionado en una nueva pantalla de SEDES
         ArrayAdapter arrayAdapter2 = new ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, list);
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnersedes.setAdapter(arrayAdapter2);
@@ -264,12 +264,12 @@ public class Menu extends AppCompatActivity {
             }
 
     });
-        //Se crear un Array para mostrar el nombre seleccionado en una nueva pantalla de PROGRAMAS
+        //Se crear un Array para mostrar el nombre seleccionado en una nueva pantalla de ADMISIONES
         ArrayAdapter arrayAdapter3 = new ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, list);
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnersedes.setAdapter(arrayAdapter3);
+        spinneradmisiones.setAdapter(arrayAdapter3);
 
-        spinnersedes.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        spinneradmisiones.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 switch (position) {
@@ -295,13 +295,58 @@ public class Menu extends AppCompatActivity {
                         break;
                 }
             }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
 
+            }
+        });
+
+        //Se crear un Array para mostrar el nombre seleccionado en una nueva pantalla de PLATAFORMAS
+        ArrayAdapter arrayAdapter4 = new ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, list);
+        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerplataformas.setAdapter(arrayAdapter4);
+
+        spinnerplataformas.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                switch (position) {
+                    case 1:
+                        Intent moodle = new Intent(Menu.this, Moodle.class);
+                        startActivity(moodle);
+                        break;
+                    case 2:
+                        Intent q10 = new Intent(Menu.this, Q10.class);
+                        startActivity(q10);
+                        break;
+                    case 3:
+                        Intent recibodematricula = new Intent(Menu.this, Recibodematricula.class);
+                        startActivity(recibodematricula);
+                        break;
+                    case 4:
+                        Intent documentosnuevos = new Intent(Menu.this, Documentosnuevos.class);
+                        startActivity(documentosnuevos);
+                        break;
+                    case 5:
+                        Intent reservadeequipos = new Intent(Menu.this, Reservadeequipos.class);
+                        startActivity(reservadeequipos);
+                        break;
+                    case 7:
+                        Intent bibliotecauniremington = new Intent(Menu.this, Bibliotecauniremington.class);
+                        startActivity(bibliotecauniremington);
+                        break;
+                    case 8:
+                        Intent moduloatencionpqrs = new Intent(Menu.this, Moduloatencionpqrs.class);
+                        startActivity(moduloatencionpqrs);
+                        break;
+                }
+            }
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
 
             }
         });
+
         }
 
 

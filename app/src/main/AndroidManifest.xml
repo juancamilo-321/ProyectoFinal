@@ -46,7 +46,14 @@
         <activity android:name=".Requisitosdeinscripcion" />
         <activity android:name=".Homologaciones" />
         <activity android:name=".Formasdepago" />
-        <activity android:name=".Conveniosydescuentos"></activity>
+        <activity android:name=".Conveniosydescuentos" />
+        <activity android:name=".Moodle" />
+        <activity android:name=".Q10" />
+        <activity android:name=".Recibodematricula" />
+        <activity android:name=".Documentosnuevos" />
+        <activity android:name=".Reservadeequipos" />
+        <activity android:name=".Bibliotecauniremington" />
+        <activity android:name=".Moduloatencionpqrs"></activity>
     </application>
 
 </manifest>
