@@ -346,7 +346,31 @@ public class Menu extends AppCompatActivity {
 
             }
         });
+        //Se crear un Array para mostrar el nombre seleccionado en una nueva pantalla de BIENESTAR Y EGRESADOS
+        ArrayAdapter arrayAdapter5 = new ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, list);
+        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerbienesyegre.setAdapter(arrayAdapter5);
 
+        spinnerbienesyegre.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                switch (position) {
+                    case 1:
+                        Intent internacionalizacion = new Intent(Menu.this, Internacionalizacion.class);
+                        startActivity(internacionalizacion);
+                        break;
+                    case 2:
+                        Intent conveniosbienestar = new Intent(Menu.this, Conveniosbienestar.class);
+                        startActivity(conveniosbienestar);
+                        break;
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
         }
 
 
