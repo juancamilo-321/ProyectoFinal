@@ -152,7 +152,7 @@ public class Menu extends AppCompatActivity {
             //revisar si esta opcion va en este punto
             });
 
-        //Se crear un Array para mostrar el nombre seleccionado en una nueva pantalla de PROGRAMAS
+        //Se crear un Array para mostrar el nombre seleccionado en una nueva pantalla de UNIREMINGTON
         ArrayAdapter arrayAdapter1 = new ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, list);
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinneruniremington.setAdapter(arrayAdapter1);
@@ -164,9 +164,6 @@ public class Menu extends AppCompatActivity {
                     case 1:
                         Intent misionvision = new Intent(Menu.this, Misionvision.class);
                         startActivity(misionvision);
-                        //webView.loadUrl("http://uniremingtonmanizales.edu.co/alta-gerencia/");
-                        //Se puede hacer de dos formas 1. Crear en webView en la nueva pagina para ver la PAGINA y crear los botoner de las otras paginas
-                        // 2. Crear una nueva pagina y mostrar todas las opciones de las carreras, crear los botoner para cada una
                         break;
                     case 2:
                         Intent valoresinstitucionales = new Intent (Menu.this, Valoresinstitucionales.class);
@@ -207,8 +204,66 @@ public class Menu extends AppCompatActivity {
             }
         });
 
-        
+        //Se crear un Array para mostrar el nombre seleccionado en una nueva pantalla de PROGRAMAS
+        ArrayAdapter arrayAdapter2 = new ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, list);
+        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnersedes.setAdapter(arrayAdapter2);
 
+        spinnersedes.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                switch (position) {
+                    case 1:
+                        Intent armenia = new Intent(Menu.this, Armenia.class);
+                        startActivity(armenia);
+                        break;
+                    case 2:
+                        Intent boyaca = new Intent(Menu.this, Boyaca.class);
+                        startActivity(boyaca);
+                        break;
+                    case 3:
+                    Intent bucaramanga = new Intent(Menu.this, Bucaramanga.class);
+                    startActivity(bucaramanga);
+                    break;
+                    case 4:
+                        Intent cucuta = new Intent(Menu.this, Cucuta.class);
+                        startActivity(cucuta);
+                        break;
+                    case 5:
+                        Intent medellin = new Intent(Menu.this, Medellin.class);
+                        startActivity(medellin);
+                        break;
+                    case 6:
+                        Intent monteria = new Intent(Menu.this, Monteria.class);
+                        startActivity(monteria);
+                        break;
+                    case 7:
+                        Intent pasto = new Intent(Menu.this, Pasto.class);
+                        startActivity(pasto);
+                        break;
+                    case 8:
+                        Intent pereira = new Intent(Menu.this, Pereira.class);
+                        startActivity(pereira);
+                        break;
+                    case 9:
+                        Intent sincelejo = new Intent(Menu.this, Sincelejo.class);
+                        startActivity(sincelejo);
+                        break;
+                    case 10:
+                        Intent yopal = new Intent(Menu.this, Yopal.class);
+                        startActivity(yopal);
+                        break;
+
+
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+
+    });
         }
 
 

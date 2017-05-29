@@ -31,7 +31,17 @@
         <activity android:name=".Reglamentoestudiantil" />
         <activity android:name=".Directorioadministrativo" />
         <activity android:name=".Dondeestamos" />
-        <activity android:name=".Misionvision"></activity>
+        <activity android:name=".Misionvision" />
+        <activity android:name=".Armenia" />
+        <activity android:name=".Boyaca" />
+        <activity android:name=".Bucaramanga" />
+        <activity android:name=".Cucuta" />
+        <activity android:name=".Medellin" />
+        <activity android:name=".Monteria" />
+        <activity android:name=".Pasto" />
+        <activity android:name=".Pereira" />
+        <activity android:name=".Sincelejo" />
+        <activity android:name=".Yopal"></activity>
     </application>
 
 </manifest>
