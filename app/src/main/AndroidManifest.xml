@@ -41,7 +41,12 @@
         <activity android:name=".Pasto" />
         <activity android:name=".Pereira" />
         <activity android:name=".Sincelejo" />
-        <activity android:name=".Yopal"></activity>
+        <activity android:name=".Yopal" />
+        <activity android:name=".Preinscripcion" />
+        <activity android:name=".Requisitosdeinscripcion" />
+        <activity android:name=".Homologaciones" />
+        <activity android:name=".Formasdepago" />
+        <activity android:name=".Conveniosydescuentos"></activity>
     </application>
 
 </manifest>

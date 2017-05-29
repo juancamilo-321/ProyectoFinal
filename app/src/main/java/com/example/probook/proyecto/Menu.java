@@ -264,6 +264,44 @@ public class Menu extends AppCompatActivity {
             }
 
     });
+        //Se crear un Array para mostrar el nombre seleccionado en una nueva pantalla de PROGRAMAS
+        ArrayAdapter arrayAdapter3 = new ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, list);
+        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnersedes.setAdapter(arrayAdapter3);
+
+        spinnersedes.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                switch (position) {
+                    case 1:
+                        Intent preinscriocion = new Intent(Menu.this, Preinscripcion.class);
+                        startActivity(preinscriocion);
+                        break;
+                    case 2:
+                        Intent requisitosdeinscripcion = new Intent(Menu.this, Requisitosdeinscripcion.class);
+                        startActivity(requisitosdeinscripcion);
+                        break;
+                    case 3:
+                        Intent homologaciones = new Intent(Menu.this, Homologaciones.class);
+                        startActivity(homologaciones);
+                        break;
+                    case 4:
+                        Intent formasdepago = new Intent(Menu.this, Formasdepago.class);
+                        startActivity(formasdepago);
+                        break;
+                    case 5:
+                        Intent conveniosydescuentos = new Intent(Menu.this, Conveniosydescuentos.class);
+                        startActivity(conveniosydescuentos);
+                        break;
+                }
+            }
+
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
         }
 
 
